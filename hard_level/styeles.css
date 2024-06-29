@@ -1,0 +1,22 @@
+.back-home-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(206, 11, 11, 0.5);
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.back-home-link:hover {
+    background-color: #b3330080; /* Change to a darker shade for hover effect */
+}
+
+p {
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+

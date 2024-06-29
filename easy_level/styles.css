@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-image: url("images/background/green-park-view.jpg");
+    background-image: url("images/pngtree-rose-flower-park-garden-background-image_2413672.jpg");
     /* Adjust background properties for better display */
     background-size: cover;
     background-position: center;
@@ -106,6 +106,7 @@ h1 {
     border-color: #e53935;
     color: #ffffff;
 }
+
 .back-home-link {
     position: absolute;
     top: 10px;
@@ -124,6 +125,6 @@ h1 {
 
 p {
     margin-bottom: 10px;
-    color: #000000;
+    color: #fff;
 
 }
