@@ -9,6 +9,6 @@ Flipping over pairs of cards to find matching pairs.
 # Easy level 
 ![alt text](image-2.png)
 
-#Basic level
+# Basic level
 
 ![alt text](image-3.png)
