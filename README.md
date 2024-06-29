@@ -6,10 +6,11 @@ Flipping over pairs of cards to find matching pairs.
 
 ##This game supports 3 levels : Easy, Basic and Hard 
 
+#Easy level 
+![alt text](image-2.png)
+
 #Basic level
 
 ![alt text](image.png)
 
 ![alt text](image-1.png)
-
-#Easy level
