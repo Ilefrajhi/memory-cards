@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-image: url("images/pngtree-rose-flower-park-garden-background-image_2413672.jpg");
+    background-image: url("{{ url_for('static', filename='easy_level/pngtree-rose-flower-park-garden-background-image_2413672.jpg') }}");
     /* Adjust background properties for better display */
     background-size: cover;
     background-position: center;
@@ -106,12 +106,11 @@ h1 {
     border-color: #e53935;
     color: #ffffff;
 }
-
 .back-home-link {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: rgba(206, 11, 11, 0.5);
+    background-color: rgba(34, 206, 11, 0.534);
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -120,11 +119,11 @@ h1 {
 }
 
 .back-home-link:hover {
-    background-color: #b3330080; /* Change to a darker shade for hover effect */
+    background-color: #06b30073; /* Change to a darker shade for hover effect */
 }
 
 p {
     margin-bottom: 10px;
-    color: #fff;
+    color: #000000;
 
 }

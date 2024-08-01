@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Memory Game</h1>
+    <p> Choose your level </p>
+    <a href="/easy_level">Easy Level</a>
+    <a href="/basic_level">Basic Level</a>
+    <a href="/hard_level">Hard Level</a>
+</body>
+</html>

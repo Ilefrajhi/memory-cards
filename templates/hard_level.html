@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Cards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #007bff;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #6c757d;
+        }
+
+        #level {
+            margin: 20px 0;
+            font-size: 20px;
+            color: #17a2b8;
+        }
+
+        #flipCount {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        #resetButton {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        #resetButton:hover {
+            background-color: #218838;
+        }
+
+        .game-board {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .back-home-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .back-home-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .fa-github {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's match some cards!</h1>
+    <h2>Coming Sooooon!</h2>
+    <div id="level">Level: Hard</div>
+    <div id="flipCount"></div>
+    <button id="resetButton">Start over</button>
+    <div class="game-board" id="gameBoard">
+        <!-- Cards will be inserted here by JavaScript -->
+    </div>
+    <a href="/" class="back-home-link">Back to Home Page</a>
+    <footer>
+        <p>2024 Memory Game. All rights reserved.</p>
+        <p>Created by <i class="fa fa-github" style="font-size: 24px;"></i> <a href="https://github.com/ilefrajhi">Ilef Rajhi</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

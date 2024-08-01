@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
-    background-image: url("images/background/green-park-view.jpg");
+    background-image: url("{{ url_for('static', filename='basic_level/green-park-view.jpg') }}");
     /* Adjust background properties for better display */
     background-size: cover;
     background-position: center;

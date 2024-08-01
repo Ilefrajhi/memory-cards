@@ -1,25 +1,61 @@
-document.addEventListener('DOMContentLoaded', () => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Cards</title>
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='basic_level/styles.css') }}">
+</head>
+<body>
+    <h1>Let's match some cards!</h1>
+    <div id="level">Level: Basic</div>
+    <div id="flipCount"></div>
+    <button id="resetButton">Start over</button>
+    <div class="game-board" id="gameBoard">
+        <!-- Cards will be inserted here by JavaScript -->
+    </div>
+    <a href="/" class ="back-home-link">Back to Home Page</a>
+
+    <footer >
+        <p> 2024 Memory Game. All rights reserved.</p>
+        <p>Created by <i class="fa fa-github" style="font-size: 24px;"> </i> <a href="https://github.com/ilefrajhi">Ilef Rajhi</a></p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
     const gameBoard = document.getElementById('gameBoard');
     const resetButton = document.getElementById('resetButton');
-    const maxTries = 14; // Maximum allowed tries
+    const maxTries = 19; // Maximum allowed tries
     let tries = 0; // Counter for tries
     let flipCount = 0; // Counter for flips
     let gameOver = false; // Flag to track game over state
+    let count = 0; // Counter for matched pairs
     let matchedPairs = 0; // Counter for matched pairs
-    const numberOfPairs = 6; // Number of pairs (update this according to your pairs)
 
     let cards = [];
     let firstCard = null;
     let secondCard = null;
     let lockBoard = false;
 
+
     const images = [
-        'images/360_F_115314898_3plpJZfmS75cC1Hks7tTwiyrIBlfj1Jc.jpg', 'images/360_F_115314898_3plpJZfmS75cC1Hks7tTwiyrIBlfj1Jc.jpg',
-        'images/download.jpeg', 'images/download.jpeg',
-        'images/images.jpeg', 'images/images.jpeg',
-        'images/person-holds-lotus-flower-their-hands_883148-915.avif', 'images/person-holds-lotus-flower-their-hands_883148-915.avif',
-        'images/Tulipa-White-Triumphator-RW-whitetriumphatorarundelcastle3-469839e.jpg', 'images/Tulipa-White-Triumphator-RW-whitetriumphatorarundelcastle3-469839e.jpg',
-        'images/2ecf067a2069128f44d75d25a32e219e.jpg', 'images/2ecf067a2069128f44d75d25a32e219e.jpg',
+         '/static/basic_level/images/cat.jpeg', 
+    '/static/basic_level/images/cat.jpeg',
+    '/static/basic_level/images/cute-baby-koala-natural-habitat-australian-animal-3d-rendering-cartoon-illustration_691560-4299.avif', 
+    '/static/basic_level/images/cute-baby-koala-natural-habitat-australian-animal-3d-rendering-cartoon-illustration_691560-4299.avif',
+    '/static/basic_level/images/dog.jpeg', 
+    '/static/basic_level/images/dog.jpeg',
+    '/static/basic_level/images/ia.jpeg', 
+    '/static/basic_level/images/ia.jpeg',
+    '/static/basic_level/images/images (1).jpeg', 
+    '/static/basic_level/images/images (1).jpeg',
+    '/static/basic_level/images/images.jpeg', 
+    '/static/basic_level/images/images.jpeg',
+    '/static/basic_level/images/portrait-beautiful-cheetah-namibia-africa-260nw-2031590879.webp', 
+    '/static/basic_level/images/portrait-beautiful-cheetah-namibia-africa-260nw-2031590879.webp',
+    '/static/basic_level/images/rabbit.jpeg', 
+    '/static/basic_level/images/rabbit.jpeg'
     ];
 
     // Function to create the game board
@@ -73,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isMatch) {
             disableCards();
             matchedPairs++;
+            count = matchedPairs; // Update count with matched pairs
             checkGameStatus();
         } else {
             unflipCards();
@@ -105,12 +142,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to check game status (win/lose)
     function checkGameStatus() {
-        if (matchedPairs === numberOfPairs) {
+        if (count === 8 && flipCount <= maxTries) {
             displayResult('Winner! Flips: ' + flipCount + ', Tries: ' + tries);
             gameOver = true; // Set game over flag
-        } else if (flipCount >= maxTries) {
+        } else if (count < 8 && flipCount >= maxTries) {
             displayResult('Game over, try again!');
             gameOver = true; // Set game over flag
+            resetBoard();
         }
     }
 
@@ -139,10 +177,6 @@ document.addEventListener('DOMContentLoaded', () => {
         tries = 0; // Reset tries counter
         flipCount = 0; // Reset flip count
         gameOver = false; // Reset game over flag
-        matchedPairs = 0; // Reset matched pairs
-        firstCard = null; // Reset first card
-        secondCard = null; // Reset second card
-        lockBoard = false; // Unlock the board
         document.getElementById('flipCount').textContent = ''; // Clear flip count display
         document.querySelectorAll('.result').forEach(el => el.remove()); // Remove any existing result messages
         createBoard(); // Restart the game
@@ -156,12 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetGame();
     });
 });
-
- /* document.addEventListener('DOMContentLoaded', () => {
-    const refreshButton = document.getElementById('refreshButton');
-
-    refreshButton.addEventListener('click', () => {
-        location.reload(); // This will refresh the page
-    });
-});
-*/
+    </script>
+</body>
+</html>
